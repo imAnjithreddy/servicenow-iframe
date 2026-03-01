@@ -5,7 +5,7 @@ export default function Home() {
   text data
   </div>
       <iframe
-        src="https://dev208775.service-now.com/api/iframe_proxy/iframeProxy/proxy"
+        src="https://dev208775.service-now.com/api/1056856/iframeproxy/proxy"
         style={{
           width: "100%",
           height: "100%",
