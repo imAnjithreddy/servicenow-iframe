@@ -10,14 +10,9 @@ export default function RequestItem({ sysId }) {
   useEffect(() => {
     async function fetchHTML() {
       try {
-        const res = await fetch(
-          `https://dev208775.service-now.com/api/iframe_proxy/iframeProxy/proxy?sys_id=${sysId}`,
-          {
-            method: 'GET',
-            headers: { 'Accept': 'text/html' },
-            credentials: 'include' // include ServiceNow session cookies
-          }
-        );
+        // ✅ CORRECT - uses proxy
+        const res = await fetch(`/api/servicenow?sys_id=123`);
+
 
         if (!res.ok) {
           throw new Error(`Error fetching HTML: ${res.status}`);
