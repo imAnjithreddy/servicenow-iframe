@@ -19,7 +19,9 @@ export default function RequestItem({ sysId }) {
         }
 
         const html = await res.text();
-        setHtmlContent(html);
+        const abc = JSON.parse(html);
+        const finalPayload = abc.result.html;
+        setHtmlContent(finalPayload);
       } catch (err) {
         console.error(err);
         setError('Failed to load request item.');
