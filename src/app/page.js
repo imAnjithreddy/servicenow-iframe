@@ -4,8 +4,15 @@ export default function Home() {
     <div>
   text data
   </div>
-      <iframe src="https://dev208775.service-now.com/api/iframe_proxy/iframeProxy/proxy" 
-        style="width:100%; height:100vh; border:none;"></iframe>
+      <iframe
+        src="https://dev208775.service-now.com/api/iframe_proxy/iframeProxy/proxy"
+        style={{
+          width: "100%",
+          height: "100%",
+          border: "none",
+        }}
+        title="ServiceNow Portal"
+      />
     </div>
   );
 }
